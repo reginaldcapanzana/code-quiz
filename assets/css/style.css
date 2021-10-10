@@ -25,13 +25,13 @@
     color: var(--darkblue);
   }
   
-  .answer-btn, .start-btn, .submit-btn {
+  .answer-btn, .start-btn, .submit-btn, .home-btn {
     background-color: var(--light);
     color: var(--blue);
     margin: 0.5rem;
   }
   
-  .answer-btn:hover, .start-btn:hover , .submit-btn {
+  .answer-btn:hover, .start-btn:hover , .submit-btn:hover, .home-btn:hover {
     background-color: var(--darkblue);
     color: var(--light);
   }

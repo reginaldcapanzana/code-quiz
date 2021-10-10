@@ -156,8 +156,7 @@ function renderUsername() {
   scoreline.setAttribute("class", "lead");
   quizPanel.appendChild(scoreline);
 
-  var form = document.createElement("form");
-  form.setAttribute("method", "POST");
+  var form = document.createElement("div");
   quizPanel.appendChild(form);
 
   var inputGroup = document.createElement("div");
@@ -208,6 +207,14 @@ function renderHighscores() {
     li.textContent = currScore.name + " - " + currScore.scoreSaved;
     quizPanel.appendChild(li);
   }
+
+  var homeButton = document.createElement("button");
+  homeButton.setAttribute("class", "btn btn-lg home-btn");
+  homeButton.textContent = "Home";
+  quizPanel.appendChild(homeButton);
+
+  homeButton = document.querySelector(".home-btn");
+  homeButton.addEventListener("click", renderStartPage);
 }
 
 function renderStartPage(){
@@ -226,6 +233,11 @@ function renderStartPage(){
   startButtonNew.setAttribute("class", "btn btn-lg start-btn");
   startButtonNew.textContent = "Start!";
   quizPanel.appendChild(startButtonNew);
+
+  startButton = document.querySelector(".start-btn");
+  startButton.addEventListener("click", startGame);
+  console.log("reached end of start page");
+
 }
 
 //Saves name to local storage
