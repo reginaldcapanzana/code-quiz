@@ -210,6 +210,24 @@ function renderHighscores() {
   }
 }
 
+function renderStartPage(){
+  quizPanel.innerHTML = "";
+
+  var title = document.createElement("h1");
+  title.textContent = "Javascript Code Quiz";
+  quizPanel.appendChild(title);
+
+  var text = document.createElement("p");
+  text.setAttribute("class", "lead");
+  text.textContent = "This quiz will test your knowledge on Javascript concepts that we have gone over in this class.";
+  quizPanel.appendChild(text);
+
+  var startButtonNew = document.createElement("button");
+  startButtonNew.setAttribute("class", "btn btn-lg start-btn");
+  startButtonNew.textContent = "Start!";
+  quizPanel.appendChild(startButtonNew);
+}
+
 //Saves name to local storage
 function saveName(nameInput) {
   var userHighscores = {
@@ -219,7 +237,7 @@ function saveName(nameInput) {
   highscores.push(userHighscores);
   localStorage.setItem("highscores", JSON.stringify(highscores));
   //Reloads the page
-  location.reload();
+  renderStartPage();
 }
 
 //Checks if the answer chosen is correct and adds points accordingly.
