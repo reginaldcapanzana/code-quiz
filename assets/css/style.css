@@ -1,0 +1,43 @@
+:root {
+    --blue: #0c3559;
+    --darkblue: #092640;
+    --seablue: #687b8c;
+    --lightseablue: #aab9bf;
+    --light: #f2f2f2;
+  }
+  
+  .custom-navbar {
+    background-color: var(--darkblue);
+  }
+  
+  .custom-navbar a {
+    font-size: 1.5rem;
+    color: var(--lightseablue);
+    font-weight: 500;
+  }
+  
+  .custom-navbar a:hover {
+    color: var(--light);
+  }
+
+  .custom-jumbotron {
+    background-color: var(--seablue);
+    color: var(--darkblue);
+  }
+  
+  .answer-btn, .start-btn, .submit-btn {
+    background-color: var(--light);
+    color: var(--blue);
+    margin: 0.5rem;
+  }
+  
+  .answer-btn:hover, .start-btn:hover , .submit-btn {
+    background-color: var(--darkblue);
+    color: var(--light);
+  }
+
+  /* New Additions */
+  .timer {
+    color: var(--lightseablue);
+  }
+  
